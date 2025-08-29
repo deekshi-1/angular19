@@ -1,0 +1,17 @@
+
+
+.navBar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: #67c090;
+}
+.contentBox {
+  padding: 20px;
+  color: #26667f;
+}
+
+h3 {
+  cursor: pointer;
+}

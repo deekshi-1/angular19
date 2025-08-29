@@ -1,0 +1,17 @@
+<div class="outerDiv">
+  <div class="navBar">
+    <div class="addUser" (click)="addUser()" [ngClass]="{ selected: flag }">
+      <h3>Add User</h3>
+    </div>
+    <div class="listUser" (click)="listUser()" [ngClass]="{ selected: !flag }">
+      <h3>User List</h3>
+    </div>
+  </div>
+  @if (flag ) {
+  <app-child (dataEvent)="recieveData($event)" ></app-child>
+  }@else {
+  <div class="tableSection">
+    <app-student-list [studentList]="students"></app-student-list>
+  </div>
+  }
+</div>

@@ -1,0 +1,40 @@
+<table>
+  <tr>
+    <th class="border">SlNo</th>
+    <th class="border">Name</th>
+    <th class="border">Course</th>
+    <th class="border">Marks</th>
+    <th class="border">Passed</th>
+  </tr>
+  @for (item of studentList; track $index;let i = $index) {
+  <tr [ngClass]="{ even: i % 2 == 0, odd: i % 2 != 0 }">
+    <td class="border">
+      <span>{{ i + 1 }}</span>
+    </td>
+    <td class="border">
+      <span>{{ item.name }}</span>
+    </td>
+    <td class="border">
+      <span>{{ item.course }}</span>
+    </td>
+    <td class="border">
+      <span>{{ item.mark }}</span>
+    </td>
+    <td
+      class="border pass"
+      [ngClass]="{
+        gradA: item.mark >= 90,
+        gradB: item.mark >= 75 && item.mark < 90,
+        gradC: item.mark >= 60 && item.mark < 75,
+        gradD: item.mark >= 40 && item.mark < 60,
+        gradF: item.mark < 40
+      }"
+    >
+      <span
+        >@switch (true) { @case (item.mark >= 90) { A } @case (item.mark >= 75) { B } @case
+        (item.mark >= 60) { c } @case (item.mark >= 40) { D } @default { F (Fail) } }</span
+      >
+    </td>
+  </tr>
+  }
+</table>

@@ -1,0 +1,21 @@
+<div class="inputSection">
+  <table>
+    <tr>
+      <th>Name</th>
+      <td>: <input type="text" [(ngModel)]="name" /></td>
+    </tr>
+    <tr>
+      <th>Course</th>
+      <td>: <input type="text" [(ngModel)]="course" /></td>
+    </tr>
+    <tr>
+      <th>Marks</th>
+      <td>: <input type="number" min="0" max="100" [(ngModel)]="mark" /></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td><button (click)="clear()">Clear</button><button (click)="submit()">Submit</button></td>
+    </tr>
+  </table>
+</div>
