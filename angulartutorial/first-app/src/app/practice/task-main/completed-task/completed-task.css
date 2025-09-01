@@ -1,0 +1,25 @@
+.list-item {
+  width: 100px;
+  display: inline-block;
+}
+button{
+  padding: 10px;
+}
+
+.completed{
+  background-color: rgb(57, 255, 57);
+  color: black;
+  font-weight: 600;
+}
+
+.notCompleted{
+  background-color: rgb(255, 0, 0);
+  font-weight: 600;
+}
+
+
+li{
+  border: 1px solid black;
+  width: 250px;
+  margin: 10px 5px;
+}

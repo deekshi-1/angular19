@@ -1,0 +1,45 @@
+.flexBox {
+  display: flex;
+  gap: 10px;
+}
+
+.left,
+.right {
+  width: 49%;
+}
+
+.addToDo {
+  margin: 10px;
+}
+input {
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+.toDolist {
+  width: fit-content;
+  padding: 5px;
+  margin: 40px auto 20px;
+}
+
+.addToButton {
+  padding: 10px;
+}
+th,
+td {
+  padding: 5px 20px;
+  min-width: 100px;
+  text-align: left;
+}
+.border {
+  border: 1px solid black;
+}
+
+.slNo {
+  min-width: fit-content;
+}
+img {
+  width: 15px;
+  display: flex;
+  margin: auto;
+}

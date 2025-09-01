@@ -1,0 +1,7 @@
+<app-items-list
+  (rmFav)="removeFav($event)"
+  (addFav)="addFav($event)"
+  [items]="items"
+  [favList]="favList"
+></app-items-list>
+<app-fav-list (rmFav)="removeFav($event)" [favList]="favList"></app-fav-list>

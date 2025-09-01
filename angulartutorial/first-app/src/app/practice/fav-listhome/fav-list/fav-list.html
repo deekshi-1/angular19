@@ -1,0 +1,10 @@
+<div class="outerDiv">
+  <h3>FAV LIST</h3>
+  <ol>
+    @for (item of favList; track $index) {
+    <li>
+      <span>{{ item }}</span> <button (click)="removeFav(item)">Remove fav</button>
+    </li>
+    }
+  </ol>
+</div>

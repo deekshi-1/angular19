@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JsonExample } from './json-example';
+import { TodoMain } from './todo-main';
 
-describe('JsonExample', () => {
-  let component: JsonExample;
-  let fixture: ComponentFixture<JsonExample>;
+describe('TodoMain', () => {
+  let component: TodoMain;
+  let fixture: ComponentFixture<TodoMain>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [JsonExample]
+      imports: [TodoMain]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(JsonExample);
+    fixture = TestBed.createComponent(TodoMain);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

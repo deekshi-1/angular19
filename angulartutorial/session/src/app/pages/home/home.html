@@ -1,0 +1,21 @@
+<div class="outerDiv">
+  <h4>Hi {{ currentUser }}</h4>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Action</th>
+    </tr>
+    @for (item of userList; track $index;let i = $index) {
+    <tr>
+      <td>{{ item.name }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.password }}</td>
+      <td><button (click)="delete(i)">Delete</button></td>
+    </tr>
+    }
+  </table>
+  <button (click)="logOut()">Logout</button>
+</div>

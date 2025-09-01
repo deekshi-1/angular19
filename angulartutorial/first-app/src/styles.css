@@ -26,4 +26,9 @@ img {
 
 li {
   padding: 5px 10px;
+  width: fit-content;
+}
+
+.outerDiv {
+  padding: 20px 40px;
 }

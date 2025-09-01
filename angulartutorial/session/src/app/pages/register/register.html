@@ -1,0 +1,23 @@
+<div class="outerDiv">
+  <div class="loginox">
+    <h3>Sign Up</h3>
+    <table>
+      <tr>
+        <th>Name :</th>
+        <td><input type="text" [(ngModel)]="user.name" /></td>
+      </tr>
+      <tr>
+        <th>Email :</th>
+        <td><input type="email" [(ngModel)]="user.email" /></td>
+      </tr>
+      <tr>
+        <th>password :</th>
+        <td><input type="password" [(ngModel)]="user.password" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button (click)="submit()">Submit</button></td>
+      </tr>
+    </table>
+  </div>
+</div>

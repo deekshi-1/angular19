@@ -1,0 +1,15 @@
+<div class="outerDiv">
+  <h3>Items List</h3>
+  <ol>
+    @for (item of items; track $index) {
+    <li>
+      <span>{{ item }}</span>
+      @if (favList.includes(item)) {
+      <button (click)="removeFav(item)">remove Fav</button>
+      } @else {
+      <button (click)="addToFav(item)">add Fav</button>
+      }
+    </li>
+    }
+  </ol>
+</div>

@@ -1,0 +1,14 @@
+<div class="outerDiv">
+  <h3>Tasks</h3>
+  <button (click)="toggleView()">{{ filterflag ? 'Show All' :  'Show Completed'}}</button>
+  @if (!filterflag ) {
+  <app-task-list
+    (rmCompleted)="rmCompleted($event)"
+    (addCompleted)="addCompleted($event)"
+    [tasks]="tasks"
+  ></app-task-list>
+  } @else {
+
+  <app-completed-task [tasks]="tasks" (rmCompleted)="rmCompleted($event)"></app-completed-task>
+  }
+</div>

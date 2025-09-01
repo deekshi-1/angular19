@@ -1,0 +1,11 @@
+<div class="outerDiv">
+  <ol>
+    @for (item of tasks; track $index) {@if (item.completed) {
+    <li [ngClass]="item.completed ? 'completed' : 'notCompleted'">
+      <span class="list-item">{{ item.name }}</span>
+
+      <button class="notCompleted" (click)="removeFav(item)">remove Completed</button>
+    </li>
+    } }
+  </ol>
+</div>

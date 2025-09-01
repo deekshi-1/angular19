@@ -1,0 +1,47 @@
+<div class="outerDiv">
+  <h2>To Do</h2>
+  <div class="flexBox">
+    <div class="left">
+      <div class="addToDo">
+        <input type="text" [(ngModel)]="todo" />
+        <button (click)="add()" class="addToButton">Add</button>
+      </div>
+      <div class="toDolist border">
+        <table>
+          <tr>
+            <th class="border slNo">No</th>
+            <th class="border">Name</th>
+            <th class="border">Action</th>
+            <th class="border">Remove</th>
+          </tr>
+          @for (item of items; track $index;let i = $index) {
+          <tr class="border">
+            <td class="slNo">{{ i+1 }}</td>
+            <td>{{ item }}</td>
+            <td>
+              @if (favList.includes(item)) {
+              <button (click)="removeFav(item)">remove Fav</button>
+              } @else {
+              <button (click)="addToFav(item)">add Fav</button>
+              }
+            </td>
+            <td><img src="../../../assets/img/delete.png" alt="delete" (click)="remove(i)" /></td>
+          </tr>
+          }
+        </table>
+      </div>
+    </div>
+    <div class="right">
+      <div class="favBlock">
+        <h4>Fav List</h4>
+        <ul>
+          @for (item of favList; track $index) {
+          <li>
+            <span>{{ item }}</span> <button (click)="removeFav(item)">Remove fav</button>
+          </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
