@@ -5,7 +5,7 @@ import { User } from '../../models/user';
   providedIn: 'root',
 })
 export class DataService {
-  users!:User[];
+  users!: User[];
   loggedUser: string = '';
 
   constructor() {

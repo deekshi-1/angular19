@@ -1,0 +1,35 @@
+<div class="outerDiv">
+  <h3>Task Home page</h3>
+  <h4>Add task</h4>
+  <div class="inputTask">
+    <div class="inputBox">Name <input type="text" [(ngModel)]="name" /></div>
+    <div class="inputBox">Description <textarea [(ngModel)]="description"></textarea></div>
+  </div>
+  <button (click)="addProduct()" class="addButton">Add Task</button>
+  <div class="showList">
+    @if(items.length>0){
+    <table>
+      <tr>
+        <th class="border slNo">Id</th>
+        <th class="border">Name</th>
+        <th class="border">Description</th>
+        <th class="border">Action</th>
+        <th class="border">Remove</th>
+      </tr>
+      @for (item of items; track $index;let i = $index) {
+      <tr class="border" [ngClass]="item.status ? 'completed' : 'unfinished'">
+        <td class="slNo">{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+          <button (click)="toggleCompletedStatus(i)">
+            @if (item.status) {mark <br />Unfinished } @else {mark <br />Completed }
+          </button>
+        </td>
+        <td><img src="../../../assets/img/delete.png" alt="delete" (click)="remove(i)" /></td>
+      </tr>
+      }
+    </table>
+    }
+  </div>
+</div>
