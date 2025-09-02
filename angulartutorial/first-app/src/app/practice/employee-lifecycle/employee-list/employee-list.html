@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th class="border">Name</th>
+    <th class="border">Department</th>
+    <th class="border">Salary</th>
+    <th class="border">Gender</th>
+    <th class="border">Address</th>
+    <th class="border">Remove</th>
+  </tr>
+  @for (item of filterList; track $index;let i = $index) {
+  <tr class="border">
+    <td class="slNo">{{ item.employeName }}</td>
+    <td>{{ item.department }}</td>
+    <td>{{ item.salary }}</td>
+    <td>{{ item.gender }}</td>
+    <td>{{ item.address }}</td>
+    <td>
+      <div class="center">
+        <img src="../../../assets/img/delete.png" alt="delete" (click)="remove(i)" />
+      </div>
+    </td>
+  </tr>
+  }
+</table>

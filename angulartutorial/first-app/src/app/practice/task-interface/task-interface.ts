@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { TaskModel } from '../../../model/task/task-model';
+
 import { FormsModule } from '@angular/forms';
-import { TaskService } from '../../../service/task/task';
+
 import { NgClass } from '@angular/common';
+import { TaskModel } from '../../model/task/task-model';
+import { TaskService } from '../../service/task/task';
 
 @Component({
   selector: 'app-task-interface',

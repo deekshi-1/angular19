@@ -1,0 +1,62 @@
+<div class="outerDiv">
+  <h3>Employee Datas</h3>
+  <div class="center">
+    <button (click)="toggle()">@if (flag) { HIde } @else { Show }</button>
+  </div>
+  <div class="displayBox">
+    @if (flag) {
+    <div>
+      <label for="name">Filter List</label
+      ><select id="name" [(ngModel)]="filterString">
+        <option value="">ALL</option>
+        @for (item of names; track $index) {
+        <option value="{{ item }}">{{ item }}</option>
+        }</select
+      ><app-employee-list [filterString]="filterString"></app-employee-list>
+    </div>
+    } @else {
+    <div class="inputBox">
+      <table>
+        <tr>
+          <th>Name</th>
+          <td>: <input type="text" [(ngModel)]="emp.employeName" /></td>
+        </tr>
+        <tr>
+          <th>Department</th>
+          <td>: <input type="text" [(ngModel)]="emp.department" /></td>
+        </tr>
+        <tr>
+          <th>Salary</th>
+          <td>: <input type="number" min="0" max="100" [(ngModel)]="emp.salary" /></td>
+        </tr>
+        <tr>
+          <th>Gender</th>
+          :
+          <label>
+            <input type="radio" name="gender" [(ngModel)]="emp.gender" value="M" />
+            Male
+          </label>
+          <label>
+            <input type="radio" name="gender" [(ngModel)]="emp.gender" value="F" />
+            Female
+          </label>
+          <label>
+            <input type="radio" name="gender" [(ngModel)]="emp.gender" value="Other" />
+            Other
+          </label>
+        </tr>
+        <tr>
+          <th>Address</th>
+          <td>: <input type="text" [(ngModel)]="emp.address" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button (click)="clear()">Clear</button><button (click)="submit()">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    }
+  </div>
+</div>

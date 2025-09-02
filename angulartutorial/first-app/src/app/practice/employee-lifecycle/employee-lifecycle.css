@@ -1,0 +1,29 @@
+.outerDiv {
+  width: 60%;
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+button{padding: 5px 10px;}
+
+.displayBox{
+  margin: 30px;
+}
+
+tr,td,th{
+  padding: 10px;
+}
+
+select{
+  margin: 10px 10px 30px;
+  padding: 5px;
+  width: 100px;
+}

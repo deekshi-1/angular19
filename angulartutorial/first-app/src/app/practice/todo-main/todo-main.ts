@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ToDoService } from '../service/toDo/to-doservice';
-import { FavService } from '../service/toDo/fav-service';
+import { ToDoService } from '../../service/toDo/to-doservice';
+import { FavService } from '../../service/fav/fav-service';
 
 @Component({
   selector: 'app-todo-main',
