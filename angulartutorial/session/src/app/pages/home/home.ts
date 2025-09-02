@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DataService } from '../../services/data-service';
-import { User } from '../../../models/user';
-
+import { User } from '../../models/user';
 @Component({
   selector: 'app-home',
   imports: [],

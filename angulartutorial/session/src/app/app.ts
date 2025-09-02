@@ -3,7 +3,7 @@ import { Home } from './pages/home/home';
 import { Login } from './pages/login/login';
 import { Register } from './pages/register/register';
 import { DataService } from './services/data-service';
-import { User } from '../models/user';
+import { User } from './models/user';
 
 @Component({
   selector: 'app-root',

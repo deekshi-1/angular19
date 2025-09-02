@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { User } from '../../../models/user';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-register',
