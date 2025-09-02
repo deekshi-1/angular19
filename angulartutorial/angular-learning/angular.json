@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "first-app": {
+    "angular-learning": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -46,10 +46,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "first-app:build:production"
+              "buildTarget": "angular-learning:build:production"
             },
             "development": {
-              "buildTarget": "first-app:build:development"
+              "buildTarget": "angular-learning:build:development"
             }
           },
           "defaultConfiguration": "development"
