@@ -1,0 +1,29 @@
+.outerDiv {
+  text-align: center;
+  padding: 10px 15vw;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.bioText{
+  padding: 10px 30px  ;
+}
+.education,
+.exp {
+  text-align: left;
+}
+.eduList {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: fit-content;
+}

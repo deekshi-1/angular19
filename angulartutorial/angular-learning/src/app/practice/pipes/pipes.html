@@ -1,0 +1,29 @@
+<div class="outerDiv">
+  <h3>Reversr Pipe</h3>
+  <input type="text" [(ngModel)]="string1" />
+  <b> &nbsp;{{ string1 | reverse }}</b>
+  <br /><br />
+  <h3>Filter Array</h3>
+  <input type="text" [(ngModel)]="filterString" />
+  <h4>Original Array</h4>
+  @for (item of filterArray; track $index) {
+  <span>{{ item }} &nbsp;</span>
+  }
+  <ol>
+    @for (item of filterArray | filter:filterString; track $index) {
+    <li>{{ item }}</li>
+    }
+  </ol>
+  <br /><br />
+  <h3>Truncate String</h3>
+  <input type="text" [(ngModel)]="string2" />&nbsp;
+  <b> &nbsp;{{ string2 | shorten : 3 }}</b>
+  <br /><br />
+  <h4>Sorting</h4>
+  <ol>
+    @for (item of users | sort:'age'; track $index) {
+    <li>{{ item.name }}--{{ item.age }}</li>
+    }
+  </ol>
+  <br /><br />
+</div>

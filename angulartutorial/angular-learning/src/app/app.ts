@@ -5,9 +5,10 @@ import { TaskMain } from './practice/task-main/task-main';
 import { TodoMain } from './practice/todo-main/todo-main';
 import { TaskInterface } from './practice/task-interface/task-interface';
 import { EmployeeLifecycle } from './practice/employee-lifecycle/employee-lifecycle';
+import { Pipes } from './practice/pipes/pipes';
 @Component({
   selector: 'app-root',
-  imports: [EmployeeLifecycle],
+  imports: [Pipes],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
