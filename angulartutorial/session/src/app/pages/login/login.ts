@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DataService } from '../../services/data-service';
 
 @Component({
   selector: 'app-login',
@@ -9,19 +10,30 @@ import { FormsModule } from '@angular/forms';
 })
 export class Login {
   user = {
-    name: '',
+    userName: '',
     password: '',
   };
 
   @Output() goToPage = new EventEmitter<string>();
-  @Output() loginData = new EventEmitter<any>();
+
+  constructor(private dataService: DataService) {}
+
   goToRegister() {
     this.goToPage.emit('register');
   }
+  
   login() {
-    if (this.user.name.length >= 3) {
+    if (this.user.userName.length >= 3) {
       if (this.user.password.length >= 4) {
-        this.loginData.emit(this.user);
+        this.dataService.login(this.user).subscribe((val) => {
+          if (val.length) {
+            alert('Loggin In');
+            localStorage.setItem('login', val[0].userName);
+            this.goToPage.emit('home');
+          } else {
+            alert('Invalid Credentials');
+          }
+        });
       } else {
         alert('Invalid credentials');
       }

@@ -1,0 +1,21 @@
+<div class="outerDiv">
+  <div class="loginox">
+    <p>Login</p>
+    <table>
+      <tr>
+        <th>Number :</th>
+        <td><input type="text" [(ngModel)]="user.phone" maxlength="10" /></td>
+      </tr>
+      <tr>
+        <th>Password :</th>
+        <td><input type="password" [(ngModel)]="user.password" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button (click)="goToRegister()">Register</button><button (click)="login()">Login</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

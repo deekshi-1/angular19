@@ -1,0 +1,49 @@
+<div class="topSection">
+  <app-input-item (refresh)="refresh()" [cloneData]="cloneData" (clearClone)="clear()"></app-input-item>
+</div>
+<div class="display">
+  @if (toDoList?.length) {
+  <table>
+    <div class="sort">
+      <div class="sortStatus"></div>
+    </div>
+    <tr>
+      <th class="toDoItem">ToDo</th>
+      <th>Created</th>
+      <th>Deadline<select id="deadline" [(ngModel)]="deadlineStatus" (ngModelChange)="changeFilter()">
+          <option value="today">Today</option>
+          <option value="week">This week</option>
+          <option value="month">This month</option>
+          <option selected value="all">All</option>
+        </select>
+      </th>
+      <th><label for="name">Filter Status</label
+        ><select id="completionId" [(ngModel)]="completionStatus" (ngModelChange)="changeFilter()">
+          <option selected value="all">ALL</option>
+          <option value="true">Completed</option>
+          <option value="false">Pending</option>
+        </select>
+      </th>
+      <th class="actionBlock">Action</th>
+    </tr>
+    @for (item of toDoFiltered; track $index) {
+    <tr [ngClass]="item.completed ? 'completed' : 'notCompleted'">
+      <td>{{ item.text }}</td>
+      <td>{{ item.createdDate | date : 'mediumDate' }}</td>
+      <td>{{ item.deadline | date : 'mediumDate' }}</td>
+      <td>
+        @if (item.completed) {
+        <button (click)="changeStatus(item.id!, false)">Remove Completed</button> } @else {
+        <button (click)="changeStatus(item.id!, true)">Add to Completed</button>}
+      </td>
+      <td class="actionBlock">
+        <div class="action">
+          <img src="duplicate.png" alt="duplicateIcon" (click)="clone(item)" />
+          <img src="delete.png" alt="deleteIcon" (click)="delete(item.id!)" />
+        </div>
+      </td>
+    </tr>
+    }
+  </table>
+  }
+</div>

@@ -1,0 +1,47 @@
+.outerDiv{
+  padding: 7vw 0px 0px;
+}
+
+.loginbox {
+  padding: 20px;
+  background-color: #faa533;
+  width: fit-content;
+  margin: auto;
+}
+
+p{
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+table{
+  padding: 10px 20px;
+}
+th,td{
+  padding:5px;
+}
+
+input{
+  padding: 5px;
+}
+button{
+  padding: 5px;
+  margin: 2px 4px;
+  text-align: center;
+}
+
+a{
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bottom{
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+

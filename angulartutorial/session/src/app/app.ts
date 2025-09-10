@@ -13,35 +13,11 @@ import { User } from './models/user';
 })
 export class App {
   page: string = 'login';
-  users!: User[];
-  currentUser: string = '';
+  users!: User[];;
   constructor(private dataService: DataService) {
-    this.users = dataService.getusers();
-    this.currentUser = dataService.getLoggedUser();
-    if (this.currentUser.length > 2) {
-      this.page = 'home';
-    }
   }
   switchPage(value: string) {
     this.page = value;
-  }
-  registerUser(userData: any) {
-    let returnVal = this.dataService.register(userData);
-    if (returnVal) {
-      this.page = 'login';
-    } else {
-      alert('Student already exist');
-    }
-  }
-
-  signIn(userData: any) {
-    let found = this.dataService.login(userData);
-    if (!found) {
-      alert('No user found');
-    } else {
-      this.page = 'home';
-      this.currentUser = this.dataService.getLoggedUser();
-    }
   }
 
   logout() {

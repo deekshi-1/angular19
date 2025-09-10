@@ -1,0 +1,42 @@
+.outerDiv {
+  padding: 10px;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  max-width: 500px;
+  margin: auto;
+  background-color: #faa533;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: cursive;
+  letter-spacing: 5px;
+}
+
+.dateBox {
+}
+
+.inputDiv {
+  padding: 10px;
+}
+input{
+  padding: 10px;
+}
+.todoInput {
+  padding: 10px;
+  width: 50%;
+  margin: 10px 0;
+}
+.buttonDiv{
+  display: flex;
+  justify-content: center ;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+button{
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}

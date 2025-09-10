@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th>Name :</th>
+    <td><input type="text" [(ngModel)]="tempData.name" /></td>
+  </tr>
+  <tr>
+    <th>Age :</th>
+    <td><input type="number" min="10" max="100" [(ngModel)]="tempData.age" /></td>
+  </tr>
+  <tr>
+    <th>Phone :</th>
+    <td><input type="text" maxlength="10" [(ngModel)]="tempData.number" /></td>
+  </tr>
+  <tr>
+    <th>Mark:</th>
+    <td><input type="number" min="0" max="100" [(ngModel)]="tempData.mark" /></td>
+  </tr>
+  <tr>
+    <td><button (click)="clear()">Clear</button></td>
+    <td><button (click)="submit()">Submit</button></td>
+  </tr>
+</table>

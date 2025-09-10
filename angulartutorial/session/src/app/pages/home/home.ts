@@ -1,27 +1,64 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { DataService } from '../../services/data-service';
-import { User } from '../../models/user';
+import { Student } from '../../models/student';
+import { InputBox } from '../input/input';
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [InputBox],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home {
   @Output() logout = new EventEmitter<string>();
-  @Input() userList!:User [];
-  @Input() currentUser: any = '';
+  stusentList!: Student[];
+  currentUser: any = '';
+  showInput: boolean = false;
+  studentData: Student = {
+    name: '',
+    age: 0,
+    number: '',
+    mark: 0,
+  };
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) {
+    this.currentUser = localStorage.getItem('login');
+    this.getStudents();
+  }
+
+  getStudents() {
+    this.dataService.getStudents().subscribe((item) => {
+      if (item) this.stusentList = item;
+    });
+  }
+
+  reload() {
+    this.getStudents();
+  }
 
   logOut() {
     this.logout.emit();
   }
 
-  delete(index: number) {
-    console.log(index);
+  delete(data: Student) {
+    this.dataService.removeStudent(data).subscribe(() => {
+      this.getStudents();
+    });
+  }
+  edit(data: Student) {
+    this.showInput = true;
+    this.studentData = data;
+  }
 
-    this.dataService.removeUser(index);
-    this.userList = this.dataService.getusers();
+  addNewUser() {
+    this.showInput = true;
+    this.studentData = {
+      name: '',
+      age: 0,
+      number: '',
+      mark: 0,
+    };
+  }
+  hide() {
+    this.showInput = false;
   }
 }

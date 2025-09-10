@@ -1,0 +1,41 @@
+<div class="dashboardOuter">
+  <div class="display">
+    <div class="item">
+      <div class="top">Total Tasks</div>
+      <div class="content">{{ total }}</div>
+    </div>
+    <div class="item">
+      <div class="top">Completed</div>
+      <div class="content">{{ completed }}</div>
+    </div>
+    <div class="item">
+      <div class="top">Pending</div>
+      <div class="content">{{ pending }}</div>
+    </div>
+  </div>
+  <div class="table">
+    <div class="display">
+      @if (filterData?.length) {
+      <table>
+        <div class="sort">
+          <div class="sortStatus"></div>
+        </div>
+        <tr>
+          <th class="toDoItem">ToDo</th>
+          <th>Created</th>
+          <th>Deadline</th>
+          <th>Status</th>
+        </tr>
+        @for (item of sortData; track $index) {
+        <tr>
+          <td>{{ item.text }}</td>
+          <td>{{ item.createdDate | date : 'mediumDate' }}</td>
+          <td>{{ item.deadline | date : 'mediumDate' }}</td>
+          <td>@if (item.completed) {Completed } @else { Pending}</td>
+        </tr>
+        }
+      </table>
+      }
+    </div>
+  </div>
+</div>

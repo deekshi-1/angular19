@@ -1,0 +1,14 @@
+@switch (page) { @case ("home") {
+<div class="home">
+  <div class="main">
+    <div class="buttonSection">
+      <button (click)="toggle()">@if (homeSection) { Show Table } @else { Show Dashboard }</button>
+      <button class="logOut" (click)="logout()">Logout</button>
+    </div>
+    @if (homeSection) {<app-dashboard></app-dashboard> } @else {<app-display-table
+    ></app-display-table> }
+  </div>
+</div>
+}@case ("login") {
+<app-login (goToPage)="goToPage($event)"></app-login>
+}@case ("signUp") { <app-sign-up (goToPage)="goToPage($event)"></app-sign-up>} }

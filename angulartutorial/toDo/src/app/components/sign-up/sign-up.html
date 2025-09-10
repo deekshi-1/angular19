@@ -1,0 +1,27 @@
+<div class="outerDiv">
+  <div class="loginbox">
+    <p>Sign Up</p>
+    <table>
+      <tr>
+        <th>Name :</th>
+        <td><input type="text" [(ngModel)]="user.name" /></td>
+      </tr>
+      <tr>
+        <th>Phone :</th>
+        <td><input type="text" [(ngModel)]="user.phone" maxlength="10"/></td>
+      </tr>
+      <tr>
+        <th>Password :</th>
+        <td><input type="password" [(ngModel)]="user.password" /></td>
+      </tr>
+      <tr>
+        <th>Confirm <br>Password :</th>
+        <td><input type="password" [(ngModel)]="confirmPassword" /></td>
+      </tr>
+    </table>
+    <div class="bottom">
+      <span>Already have a account <a (click)="login()">Login</a></span>
+      <div class="submitButton"><button (click)="submit()">Submit</button></div>
+    </div>
+  </div>
+</div>

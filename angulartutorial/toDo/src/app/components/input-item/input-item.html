@@ -1,0 +1,21 @@
+<div class="outerDiv">
+  <h3>ToDo</h3>
+  <hr />
+  <div class="inputDiv">
+    <div class="top">
+      <input type="date" name="" id="" [(ngModel)]="inputData.deadline" [min]="today"/>
+    </div>
+    <div class="todoInputDiv">
+      <input
+        type="text"
+        class="todoInput"
+        placeholder="Add your todo"
+        [(ngModel)]="inputData.text"
+      />
+    </div>
+    <div class="buttonDiv">
+      <button (click)="clear()">Clear</button>
+      <button (click)="submit()">Add</button>
+    </div>
+  </div>
+</div>

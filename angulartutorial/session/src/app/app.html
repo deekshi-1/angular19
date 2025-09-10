@@ -1,9 +1,9 @@
 @switch (page) { @case ("home") {
-<app-home (logout)="logout()" [userList]="users" [currentUser]="currentUser"></app-home>
+<app-home (logout)="logout()"></app-home>
 } @case ("login") {
-<app-login (goToPage)="switchPage($event)" (loginData)="signIn($event)"></app-login>
+<app-login (goToPage)="switchPage($event)"></app-login>
 } @case ("register") {
-<app-register (registernData)="registerUser($event)"></app-register>
+<app-register (goToPage)="switchPage($event)"></app-register>
 }@default {
 <app-login (goToPage)="switchPage($event)"></app-login>
 }}

@@ -1,0 +1,60 @@
+{
+  "toDo": [
+    {
+      "id": "e185",
+      "text": "pay Bill",
+      "createdDate": "2025-09-09T16:53:31.063Z",
+      "deadline": "2025-09-09T00:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "e3d4",
+      "text": "buy groceries",
+      "createdDate": "2025-09-09T16:53:58.159Z",
+      "deadline": "2025-09-18T00:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "552b",
+      "text": "car wash",
+      "createdDate": "2025-09-09T16:54:53.943Z",
+      "deadline": "2025-09-12T00:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "bdff",
+      "text": "Pay fees",
+      "createdDate": "2025-09-09T16:55:15.047Z",
+      "deadline": "2025-11-19T00:00:00.000Z",
+      "completed": true
+    },
+    {
+      "id": "3024",
+      "text": "water bill",
+      "createdDate": "2025-09-09T16:55:39.006Z",
+      "deadline": "2025-09-25T00:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": "2a9b",
+      "text": "pay Bills",
+      "createdDate": "2025-09-09T17:06:16.780Z",
+      "deadline": "2025-09-09T00:00:00.000Z",
+      "completed": false
+    }
+  ],
+  "users": [
+    {
+      "id": "2fec",
+      "name": "arun",
+      "phone": "9988776655",
+      "password": "1111"
+    },
+    {
+      "id": "d553",
+      "name": "Rahul",
+      "phone": "8787985676",
+      "password": "1111"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+.logOut {
+  margin: 0 30px;
+  padding: 10px 20px;
+  background-color: red;
+  color: aliceblue;
+  font-size: 22px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+button{
+  padding: 10px 30px;
+}
+
+.buttonSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.home{
+  padding: 40px 20px 0;
+}

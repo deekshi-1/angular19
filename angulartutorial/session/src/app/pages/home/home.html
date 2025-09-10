@@ -1,6 +1,17 @@
 <div class="outerDiv">
   <h4>Hi {{ currentUser }}</h4>
 
+  <div class="showButton">
+    @if (showInput) {<button (click)="hide()">Hide</button> } @else {<button (click)="addNewUser()">
+      Add New User
+    </button>
+    }
+  </div>
+  @if (showInput) {
+  <app-input [studentData]="studentData" (reload)="reload()"></app-input>
+  }
+  <div class="inputDiv"></div>
+
   <table>
     <tr>
       <th>Name</th>
@@ -8,12 +19,14 @@
       <th>Password</th>
       <th>Action</th>
     </tr>
-    @for (item of userList; track $index;let i = $index) {
+    @for (item of stusentList; track $index;let i = $index) {
     <tr>
       <td>{{ item.name }}</td>
-      <td>{{ item.email }}</td>
-      <td>{{ item.password }}</td>
-      <td><button (click)="delete(i)">Delete</button></td>
+      <td>{{ item.age }}</td>
+      <td>{{ item.mark }}</td>
+      <td>
+        <button (click)="delete(item)">Delete</button><button (click)="edit(item)">Edit</button>
+      </td>
     </tr>
     }
   </table>

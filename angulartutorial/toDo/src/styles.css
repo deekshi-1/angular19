@@ -1,11 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   margin: 0;
-}
-.outerDiv{
-    padding: 20px;
+  height: 100vh;
+  background-color: #ef7722;
 }
 
-td,th{
-  padding: 10px 0;
+button{
+  cursor: pointer;
 }
