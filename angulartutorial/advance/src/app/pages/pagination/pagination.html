@@ -1,0 +1,45 @@
+<div class="nav">
+  <button (click)="slicePage(pageItems[0])" [disabled]="currentPage == 1">&lt;&lt;</button
+  ><button (click)="slicePage(currentPage - 1)" [disabled]="currentPage == 1">&lt;</button>
+  <div class="nav">
+    @for (item of pageItems; track $index;let i =$index) {
+    <button (click)="slicePage(item)" [ngClass]="{ active: currentPage == i + 1 }" class="btnIcon">
+      {{ item }}</button
+    >}
+  </div>
+  <button (click)="slicePage(currentPage + 1)" [disabled]="currentPage == pageItems.length">
+    &gt;</button
+  ><button (click)="slicePage(pageItems.length)" [disabled]="currentPage == pageItems.length">
+    &gt;&gt;
+  </button>
+</div>
+
+<div class="nav">
+  Page No:
+  <input
+    type="number"
+    min="1"
+    max="{{ pageItems.length }}"
+    [(ngModel)]="inputData"
+    placeholder="Enter page No"
+  /><button (click)="slicePage(inputData)">Go to</button>
+</div>
+
+<div class="p10">
+  <table>
+    <tr>
+      <th class="num">No</th>
+      <th class="name">Movie Name</th>
+      <th class="genre">Genre</th>
+      <th class="lang">Language</th>
+    </tr>
+    @for ( item of displayData; track $index;let i =$index) {
+    <tr>
+      <td class="num">{{ item.id }}</td>
+      <td class="name">{{ item.title }}</td>
+      <td class="genre">{{ item.genre }}</td>
+      <td class="lang">{{ item.language }}</td>
+    </tr>
+    }
+  </table>
+</div>

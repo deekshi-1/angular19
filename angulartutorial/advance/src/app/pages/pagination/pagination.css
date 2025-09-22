@@ -1,0 +1,86 @@
+.nav {
+  width: fit-content;
+  margin: 10px auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+tr{
+  border-bottom:1px solid black ;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+table {
+  text-align: left;
+  border: 2px solid black;
+  margin: 40px auto 0;
+  width: 950px;
+}
+
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+td {
+  padding: 10px 20px;
+}
+
+.name,
+.genre {
+  width: 350px;
+  word-wrap: break-word;
+}
+
+.lang {
+  width: 200px;
+}
+
+.num {
+  width: 28px;
+}
+
+.active {
+  background-color: green;
+}
+
+.btnIcon {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.p10 {
+  padding: 10px;
+}
+@media (max-width: 1200px) {
+  table {
+    width: auto;
+    padding: 10px;
+  }
+  div {
+    font-size: 15px;
+  }
+  .name {
+    width: 250px;
+  }
+  .genre,.lang {
+    width: 200px;
+  }
+}
+@media (max-width: 576px) {
+  .btnIcon {
+    display: none;
+  }
+  .active {
+    display: block;
+    background-color: transparent;
+  }
+  th,td{
+    padding: 5px;
+  }
+}

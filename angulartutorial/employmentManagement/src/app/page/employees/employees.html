@@ -1,0 +1,23 @@
+<div class="table">
+  <div class="display">
+    @if (filterData.length) {
+    <table>
+      <tr>
+        <th>Id</th>
+        <th class="toDoItem">Name</th>
+        <th>Eamil</th>
+        <th>Phone</th>
+      </tr>
+      @for (item of filterData; track $index) {
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.phone }}</td>
+      </tr>
+      }
+    </table>
+    }
+  </div>
+</div>
+

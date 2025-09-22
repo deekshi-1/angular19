@@ -1,0 +1,96 @@
+<div class="formDiv">
+  <div class="top">Registration</div>
+  <form [formGroup]="userForm">
+    <div class="flex-row">
+      <div class="item">
+        <label for="name">First Name</label>
+        <input type="text" formControlName="fName" />
+        <span
+          class="error"
+          [hidden]="!(userForm.get('fName')?.invalid && userForm.get('fName')?.touched)"
+          >Required</span
+        >
+      </div>
+      <div class="item">
+        <label for="name">Last Name</label>
+        <input type="text" formControlName="lName" />
+        <span
+          class="error"
+          [hidden]="!(userForm.get('lName')?.invalid && userForm.get('lName')?.touched)"
+          >Required</span
+        >
+      </div>
+    </div>
+    <div class="flex-row left">
+      <div class="item">
+        <label for="name">Eamil</label>
+        <input type="email" formControlName="email" />
+        @if(userForm.get('email')?.invalid && userForm.get('email')?.touched){
+        <div class="error">
+          @if(userForm.get('email')?.hasError('required')){
+          <span>Email field is required</span>}@else if(userForm.get('email')?.hasError('pattern')){
+          <span [hidden]="">Must be an email</span>
+          }
+        </div>
+        }
+      </div>
+    </div>
+    <div class="left" formArrayName="phone">
+      <div class="phoneName">Phone</div>
+      @for (phnCtrl of phone.controls; track phnCtrl; let i = $index) {
+      <div class="itemmob">
+        <input [formControlName]="i" placeholder="Phone Number" maxlength="10" />
+        <button type="button" (click)="removePhone(i)" class="removeButton" [hidden]="i == 0">
+          Remove
+        </button>
+        @if(userForm.get(['phone',i])?.invalid && userForm.get(['phone',i])?.touched){
+        <div class="error">
+          @if(userForm.get(['phone',i])?.hasError('required')){
+          <span>Mobile required</span>}@else if(userForm.get(['phone',i])?.hasError('pattern')){
+          <span>Mobile must be exactly 10 digits</span>
+          }
+        </div>
+        }
+      </div>
+      }
+      <button type="button" (click)="addPhone()" [hidden]="phone.controls.length > 3">
+        Add Phone
+      </button>
+    </div>
+
+    <div class="flex-row">
+      <div class="item">
+        <label for="name">Password</label>
+        <input type="password" formControlName="password" />
+        @if(userForm.get('password')?.invalid && userForm.get('password')?.touched){
+        <div class="error">
+          @if(userForm.get('password')?.hasError('required')){
+          <span>Password required</span>}@else if(userForm.get('password')?.hasError('pattern')){
+          <span>Must start with 6 7 8</span>
+          }@else if(userForm.get('password')?.hasError('minlength')||
+          userForm.get('password')?.hasError('maxlength')){
+          <span>Must be between 6-10 characters</span>
+          }
+        </div>
+        }
+      </div>
+      <div class="item">
+        <label for="name">Confirm Password</label>
+        <input type="password" formControlName="confirmPassword" />
+        @if(userForm.get('confirmPassword')?.hasError('required') &&
+        userForm.get('confirmPassword')?.touched){
+        <span class="error">Password Required</span>
+        }@else if(userForm.hasError('passwordMissMatch') &&
+        userForm.get('confirmPassword')?.touched){ <span class="error">Password Mismatch</span>}
+      </div>
+    </div>
+    <div class="phoneName">
+      <input type="checkbox" formControlName="subscribe" /> Subscribe to Newsletter
+    </div>
+
+    <div class="button">
+      <button type="reset">Reset</button>
+      <button (click)="submit()" [disabled]="userForm.invalid">Submit</button>
+    </div>
+  </form>
+</div>

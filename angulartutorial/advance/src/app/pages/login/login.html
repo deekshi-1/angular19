@@ -1,0 +1,65 @@
+<div class="formDiv">
+  <div class="top">Login</div>
+  <form action="submit()" #registrationForm="ngForm">
+    <div class="flex-row">
+      <div class="item">
+        <label for="name">Eamil</label>
+        <input
+          type="email"
+          [(ngModel)]="form.email"
+          name="email"
+          required
+          inputmode="email"
+          autocomplete="email"
+          #email="ngModel"
+          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}"
+          [ngClass]="{
+            valid: email.valid && email.touched && email.dirty,
+            invalid: email.invalid && (email.touched || email.dirty || status)
+          }"
+        />
+        P:{{ email.pristine }} &nbsp; T:{{ email.touched }} &nbsp; UnT:{{ email.untouched }} &nbsp;
+        D:{{ email.dirty }}
+        <div class="error">
+          <span [hidden]="!email.errors?.['required']|| email.pristine"
+            >Email field is required</span
+          >
+          <span [hidden]="!email.errors?.['pattern']|| email.pristine">Must be a email</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex-row">
+      <div class="item">
+        <label for="name">Password</label>
+        <input
+          type="password"
+          [(ngModel)]="form.password"
+          name="password"
+          required
+          autocomplete="current-password"
+          #password="ngModel"
+          minlength="8"
+          maxlength="12"
+          [ngClass]="{
+            valid: password.valid && password.touched && password.dirty,
+            invalid: password.invalid && (password.touched || password.dirty || status)
+          }"
+        />P:{{ password.pristine }}&nbsp; T:{{ password.touched }}&nbsp; UnT:{{
+          password.untouched
+        }}&nbsp; D:{{ password.dirty }}
+        <div class="error">
+          <span [hidden]="!password.errors?.['required']|| password.pristine"
+            >Password field is required</span
+          >
+          <span [hidden]="!password.errors?.['minlength'] || password.pristine"
+            >Must be 8 characters</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="button flex-row">
+      <button type="reset">Reset</button>
+      <button type="submit" (click)="submit(registrationForm)">Submit</button>
+    </div>
+  </form>
+</div>

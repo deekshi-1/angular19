@@ -27,7 +27,7 @@ export class DataService {
   }
 
   deletTodo(id: string) {
-    return this.http.delete(this.toDoUrl + '/' + id);
+    return this.http.delete(this.toDoUrl + 'unknown/' + id);
   }
 
   // USER LOGIN AND REGISTER

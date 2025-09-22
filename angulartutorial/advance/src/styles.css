@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: rgba(12, 199, 199, 0.342);
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  position: relative;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

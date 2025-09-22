@@ -1,0 +1,16 @@
+<div class="main">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" (openedChange)="isDrawerOpen = $event">
+      <app-nav-bar></app-nav-bar>
+    </mat-drawer>
+
+    <div class="topNavBar">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon>{{ isDrawerOpen ? 'close' : 'menu' }}</mat-icon>
+      </button>
+      <span>Nav Bar</span>
+    </div>
+
+    <div class="routerOutlet"><router-outlet></router-outlet></div>
+  </mat-drawer-container>
+</div>

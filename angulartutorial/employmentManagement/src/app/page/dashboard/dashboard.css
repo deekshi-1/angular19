@@ -1,0 +1,24 @@
+.display {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.item {
+  width: 40%;
+  border: 2px solid black;
+  background-color: #ebebeb;
+}
+
+.top {
+  padding: 20px;
+  background-color: #48b3af;
+}
+
+.content {
+  padding: 40px 0px;
+}

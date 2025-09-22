@@ -1,0 +1,31 @@
+.mat-drawer-content {
+  padding: 10px;
+}
+mat-drawer-container,
+mat-drawer {
+  background: transparent;
+  height: 100vh;
+}
+mat-drawer {
+  width: 200px;
+  background-color: rgba(12, 216, 216, 0.342);
+  border-radius: 0;
+}
+.example-sidenav {
+  padding: 20px;
+}
+
+mat-icon {
+  margin: 0;
+}
+
+.routerOutlet {
+  padding: 10px;
+}
+
+.topNavBar{
+  background-color: rgba(12, 216, 216, 0.342);
+}
+span{
+  margin: auto;
+}

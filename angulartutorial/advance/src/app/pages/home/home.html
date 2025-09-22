@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="d-flex align-items-center justify-content-evenly my-4 flex-wrap">
+    <div class="col-sm-10 col-md-5 my-2">
+      orem ipsum, dolor sit amet consectetur adipisicing elit. Enim necessitatibus nemo cupiditate
+      accusantium voluptatem dolore assumenda repudiandae odit sunt soluta.
+    </div>
+    <div class="col-sm-10 col-md-5">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim necessitatibus nemo cupiditate
+      accusantium voluptatem dolore assumenda repudiandae odit sunt soluta.
+    </div>
+  </div>
+  <div class="row flex-wrap justify-content-evenly">
+    <div class="col-10 col-md-5 my-3">
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="https://material.angular.dev/assets/img/examples/shiba2.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+        <mat-card-content>
+          <p class="m-3">
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+            Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu
+            was originally bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button matButton>LIKE</button>
+          <button matButton>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-10 col-md-5 my-3">
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="https://material.angular.dev/assets/img/examples/shiba2.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+        <mat-card-content>
+          <p class="m-3">
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+            Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu
+            was originally bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button matButton>LIKE</button>
+          <button matButton>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  @if (images) {
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper w-100">
+        <img [src]="images[0]" alt="Random first slide" class="w-100"/>
+      </div>
+      <div class="carousel-caption ">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper w-100">
+        <img [src]="images[1]" alt="Random second slide" class="w-100"/>
+      </div>
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper w-100">
+        <img [src]="images[2]" alt="Random third slide" class="w-100"/>
+      </div>
+      <div class="carousel-caption">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  }
+</div>

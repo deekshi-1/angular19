@@ -1,0 +1,275 @@
+{
+  "employee": [
+    {
+      "id": "01K58J0MW3KKA8QQTNYH43T87D",
+      "name": "Brendan",
+      "phone": "8857923231",
+      "email": "brauprich0@blogtalkradio.com",
+      "password": "971",
+      "role": "admin"
+    },
+    {
+      "id": "01K58J0MW46RVQKR7GFK41N4SB",
+      "name": "Candis",
+      "phone": "1594932212",
+      "email": "crawnsley1@friendfeed.com",
+      "password": "007",
+      "role": "admin"
+    },
+    {
+      "id": "01K58J0MW5NPB7CPT5YZ8F5YWG",
+      "name": "Valerie",
+      "phone": "8166132567",
+      "email": "vkerfod2@blogger.com",
+      "password": "443",
+      "role": "admin"
+    },
+    {
+      "id": "01K58J0MW5BKJ4A0YWFMG3J25R",
+      "name": "Wandie",
+      "phone": "1454457597",
+      "email": "wrispine3@bloglines.com",
+      "password": "3899",
+      "role": "admin"
+    },
+    {
+      "id": "01K58J0MW68W2ABZ9R0KS66RNJ",
+      "name": "Geraldine",
+      "phone": "7942490866",
+      "email": "ghinrichs4@marriott.com",
+      "password": "01",
+      "role": "employer"
+    },
+    {
+      "id": "01K58J0MW7MMQBQ3VZV7VQMZAA",
+      "name": "Filmore",
+      "phone": "4929817900",
+      "email": "fconws5@godaddy.com",
+      "password": "1934",
+      "role": "employer"
+    },
+    {
+      "id": "01K58J0MW7SVNQ2PVHFRDNXJY0",
+      "name": "Juliana",
+      "phone": "6243323358",
+      "email": "jdurtnall6@sogou.com",
+      "password": "15778",
+      "role": "employer"
+    },
+    {
+      "id": "01K58J0MW8JBEPJHTZH75Y9SJ4",
+      "name": "Reginald",
+      "phone": "9298721889",
+      "email": "rcusworth7@godaddy.com",
+      "password": "70377",
+      "role": "employer"
+    },
+    {
+      "id": "01K58J0MW8XHGWJWP3X70ZQEX8",
+      "name": "Ellie",
+      "phone": "2770499092",
+      "email": "eeverix8@reddit.com",
+      "password": "6",
+      "role": "employer"
+    },
+    {
+      "id": "01K58J0MW98JQHZX9XS7060E0W",
+      "name": "Chanda",
+      "phone": "1080478086",
+      "email": "clocard9@ebay.com",
+      "password": "704",
+      "role": "employer"
+    },
+    {
+      "id": "01K58J0MW9NPE7RX0ZS8NTWH5D",
+      "name": "Marita",
+      "phone": "4137398496",
+      "email": "malpa@sbwire.com",
+      "password": "35703",
+      "role": "employer"
+    },
+    {
+      "id": "01K58J0MWAA75VDZPQFJHJXPEA",
+      "name": "Joy",
+      "phone": "9601042547",
+      "email": "jelingtonb@spiegel.de",
+      "password": "2",
+      "role": "employer"
+    },
+    {
+      "id": "01K58J0MWBVNXQMH4XC9WNEGY7",
+      "name": "Dwain",
+      "phone": "1843644711",
+      "email": "dbaignardc@paginegialle.it",
+      "password": "5",
+      "role": "employer"
+    },
+    {
+      "id": "01K58J0MWBFB3DFRAVW290453Q",
+      "name": "Noby",
+      "phone": "9964450885",
+      "email": "ncogerd@google.pl",
+      "password": "8885",
+      "role": "employer"
+    },
+    {
+      "id": "01K58J0MWC5HQZ7S32Y3GCWC6D",
+      "name": "Dalenna",
+      "phone": "2059851866",
+      "email": "ddunsmuire@blinklist.com",
+      "password": "418"
+    },
+    {
+      "id": "01K58J0MWC9CH2TVXP8NR8RQ7F",
+      "name": "Chrotoem",
+      "phone": "4965494245",
+      "email": "ccockhillf@walmart.com",
+      "password": "217",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWDWQ10K0FHHMXC1HHR",
+      "name": "Jerrie",
+      "phone": "8190382012",
+      "email": "jfrearg@rakuten.co.jp",
+      "password": "5",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWDG1BRR0BXWE94QRB4",
+      "name": "Theodor",
+      "phone": "2572351145",
+      "email": "tshillomh@vk.com",
+      "password": "624",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWEMWVC82RGTJHTHWSK",
+      "name": "Laurence",
+      "phone": "1636861342",
+      "email": "lnilesi@xrea.com",
+      "password": "0038",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWE4P6Z0M0912GDQ4WF",
+      "name": "Chev",
+      "phone": "3293364756",
+      "email": "cnicolj@weibo.com",
+      "password": "23186",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWF01QS2K39Q5997XTV",
+      "name": "Zuzana",
+      "phone": "8997146114",
+      "email": "zantognellik@dailymotion.com",
+      "password": "9",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWFXMN0HRCYFMRFSEBN",
+      "name": "Izaak",
+      "phone": "3410523340",
+      "email": "ishaxbyl@clickbank.net",
+      "password": "3517",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWGP91S473K6YH95H0M",
+      "name": "Alina",
+      "phone": "7994966799",
+      "email": "adimitrioum@ihg.com",
+      "password": "93",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWHZJCH8MRW5V9JYP59",
+      "name": "Joy",
+      "phone": "9713159640",
+      "email": "jfozardn@etsy.com",
+      "password": "6068",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWH7VJ5SCWEXM26W54Y",
+      "name": "Drud",
+      "phone": "0993561365",
+      "email": "dthomersono@g.co",
+      "password": "2552",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWJSYEMZSAY82YG8T94",
+      "name": "Tony",
+      "phone": "7908922392",
+      "email": "tfouldp@weather.com",
+      "password": "3138",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWJ3PY76ABATPT0VRPM",
+      "name": "Milka",
+      "phone": "4871137716",
+      "email": "msellanq@wsj.com",
+      "password": "4",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWKYZAQ0B8V9ZD1XJQC",
+      "name": "Archibold",
+      "phone": "2416032259",
+      "email": "awiggamr@webmd.com",
+      "password": "50",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWKAWNX4DX1D831PQ4B",
+      "name": "Hamel",
+      "phone": "3330026383",
+      "email": "hsloys@spiegel.de",
+      "password": "5",
+      "role": "employee"
+    },
+    {
+      "id": "01K58J0MWMHH6TJHQAYD6S1JCY",
+      "name": "Darci",
+      "phone": "1109903863",
+      "email": "dportigallt@google.cn",
+      "password": "98",
+      "role": "employee"
+    },
+    {
+      "id": "e4b5",
+      "name": "Arun",
+      "phone": "1233123989",
+      "email": "arun@123.com",
+      "password": "1111",
+      "role": "Employee"
+    },
+    {
+      "id": "b781",
+      "name": "arjun",
+      "phone": "1731987381",
+      "email": "ddd@gam.com",
+      "password": "111",
+      "role": ""
+    },
+    {
+      "id": "17e3",
+      "name": "avvv",
+      "phone": "7987899879",
+      "email": "aa@jj.com",
+      "password": "1111",
+      "role": "Employer"
+    },
+    {
+      "id": "1a76",
+      "name": "Abhinav",
+      "phone": "7678614541",
+      "email": "abhibnav@ia.com",
+      "password": "1111",
+      "role": "admin"
+    }
+  ]
+}

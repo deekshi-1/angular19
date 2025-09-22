@@ -1,0 +1,29 @@
+.outerDiv {
+  padding: 7vw 0px 0px;
+}
+
+.loginox {
+  padding: 20px;
+  background-color: #faa533;
+  width: fit-content;
+  margin: auto;
+}
+
+p {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+input {
+  padding: 5px;
+}
+button {
+  padding: 5px;
+  margin: 2px 4px;
+}

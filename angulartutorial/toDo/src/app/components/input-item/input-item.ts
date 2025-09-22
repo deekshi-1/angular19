@@ -14,12 +14,23 @@ export class InputItem implements OnChanges {
   @Output() clearClone = new EventEmitter();
   @Input() cloneData!: any;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) { }
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['cloneData']&& this.cloneData) {
+    if (changes['cloneData'] && this.cloneData) {
+      let deadline: string = '';
+
+      if (this.cloneData.deadline) {
+        const parsedDate = new Date(this.cloneData.deadline);
+        if (!isNaN(parsedDate.getTime())) {
+          deadline = parsedDate.toISOString().split('T')[0];
+        } else {
+          console.warn('Invalid deadline format:', this.cloneData.deadline);
+        }
+      }
+
       this.inputData = {
         text: this.cloneData.text,
-        deadline: new Date(this.cloneData.deadline).toISOString().split('T')[0],
+        deadline: deadline,
       };
     }
   }

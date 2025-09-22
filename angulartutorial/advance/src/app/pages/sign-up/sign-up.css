@@ -1,0 +1,64 @@
+.formDiv {
+  border: 1px solid rgb(0, 0, 0);
+  width: fit-content;
+  margin: 40px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  min-width: 500px;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 25px;
+}
+
+.top {
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  background-color: rgb(83, 211, 83);
+  color: white;
+}
+
+form {
+  padding: 40px;
+  background-color: #74e50d59;
+}
+
+.button {
+  margin-top: 40px;
+}
+
+Input {
+  padding: 5px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  padding: 5px;
+}
+
+.phoneName {
+  margin: 10px 0;
+}
+.itemmob {
+  margin-bottom: 10px;
+}
+
+.removeButton {
+  margin-left: 10px;
+}
