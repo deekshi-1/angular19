@@ -13,6 +13,27 @@
       <div class="content">{{ pending }}</div>
     </div>
   </div>
+  <div class="directiveClass">
+    <div class="spaceRemove">
+      <input type="text" [(ngModel)]="inputText" />
+      <p [appEmptySpace]="inputText"></p>
+    </div>
+    <div class="elipseBlock">
+      <button appElipse="You have more bacterial cells than human cells">Click Me</button>
+    </div>
+    <div class="validation">
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="email"
+        ngModel
+        appValidate="email"
+        #emailModel="ngModel"
+      />
+      @if (emailModel.invalid && emailModel.touched) { @if(emailModel.errors?.['invalidEmail']){
+      <small>Invalid email format.</small> } }
+    </div>
+  </div>
   <div class="table">
     <div class="display">
       @if (filterData?.length) {

@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -14,4 +14,3 @@ export class App {
     this.router.navigate([page]);
   }
 }
-  

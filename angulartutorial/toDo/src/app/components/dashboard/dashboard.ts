@@ -2,9 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Todo } from '../../interface/todo';
 import { DataService } from '../../services/data-service';
 import { DatePipe } from '@angular/common';
+import { FormsModule } from "@angular/forms";
+import { EmptySpace } from '../../../directive/empty-space';
+import { Elipse } from "../../../directive/elipse";
+import { ValidateDirective } from "../../../directive/validate";
 @Component({
   selector: 'app-dashboard',
-  imports: [DatePipe],
+  imports: [DatePipe, FormsModule, EmptySpace, Elipse, ValidateDirective],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
@@ -14,6 +18,8 @@ export class Dashboard implements OnInit {
   pending!: number;
   filterData!: Todo[];
   sortData!: Todo[];
+  inputText: string = '';
+  email: string = ''
 
   ngOnInit(): void {
     this.getData();
@@ -21,7 +27,7 @@ export class Dashboard implements OnInit {
 
   toDoList!: Todo[];
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) { }
 
   getData() {
     this.dataService.getData().subscribe((data) => {
