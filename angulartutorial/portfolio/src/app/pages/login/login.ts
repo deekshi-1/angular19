@@ -1,0 +1,40 @@
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIcon } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { LoginService } from '../../services/login/login-service';
+
+@Component({
+  selector: 'app-login',
+  imports: [MatCardModule, MatIcon, MatFormFieldModule, MatInputModule, MatButtonModule, ReactiveFormsModule],
+  templateUrl: './login.html',
+  styleUrl: './login.scss'
+})
+export class Login {
+  loginForm: FormGroup;
+  hide: Boolean = true;
+  value: boolean = false;
+  submitted: boolean = false;
+
+  constructor(private fb: FormBuilder, private logService: LoginService) {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+      password: ['', [Validators.required]]
+    });
+  }
+
+  onSubmit() {
+    this.submitted = true
+    this.value = this.logService.checkLogin(this.loginForm.value)
+    if (this.value) {
+      console.log("sucess");
+      this.submitted = false;
+    } else {
+      console.log("failure");
+
+    }
+  }
+}
