@@ -1,1 +1,29 @@
-<p>project works!</p>
+<h3 class="text-center my-5">Project</h3>
+@if(role ==='admin'){
+<div class="d-flex justify-content-end my-4">
+  <button matButton="tonal"><mat-icon>add</mat-icon>Add Project</button>
+</div>
+} @if (pageData) { @for ( item of pageData; track $index) {
+<div class="items px-4 mb-3">
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>{{ item.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="my-2">
+      <h6>Tech Stack</h6>
+      @for ( techItem of item.techStack; track $index){<span>&nbsp;{{ techItem }}&nbsp;</span>}
+    </mat-card-content>
+    <mat-card-content class="my-2">
+      <h6>Description</h6>
+      <ul>
+        @for ( descItem of item.description; track $index){
+        <li class="my-1">{{ descItem }}</li>
+        }
+      </ul></mat-card-content
+    >
+    @if(role ==='admin'){<mat-card-actions align="end">
+      <button matButton>Edit</button> </mat-card-actions
+    >}
+  </mat-card>
+</div>
+}}

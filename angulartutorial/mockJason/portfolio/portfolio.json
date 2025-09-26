@@ -1,9 +1,62 @@
 {
-    "auth": {
-        "email": "abc@aa.in",
-        "password": "1234"
+    "auth": [
+        {
+            "email": "abc@aa.in",
+            "password": "1234"
+        }
+    ],
+    "about": {
+        "name": "Deekshith C",
+        "description": "Experienced developer with a strong foundation in building dynamic and scalable web applications. Proficient in frontend frameworks with expertise in translating complex UI/UXndesigns into responsive, highperformance interfaces. Recently completed comprehensive trainingvin Full Stack Development, enhancing backend skills.",
+        "education": [
+            {
+                "type": "High School-10th",
+                "institute": "Mambaram English Medium School",
+                "percentage": "95"
+            },
+            {
+                "type": "High Secondary 12th",
+                "institute": "Mambaram Higher Secondary School",
+                "percentage": "85.5"
+            },
+            {
+                "type": "Graduation B.Tech",
+                "institute": "Mambaram English Medium School",
+                "percentage": "75.6"
+            }
+        ]
     },
-    "home":{
-        
-    }
+    "projects": [
+        {
+            "id": "e185",
+            "name": "E-Commerce Website",
+            "techStack": [
+                "React",
+                "Nodejs",
+                "MongoDb"
+            ],
+            "description": [
+                "User Registration & Authentication: Secure user sign-up and login system",
+                "Shopping Cart: Add products to the cart and proceed to checkout.",
+                "Order Management: Place orders, view order history, and track status.",
+                "Payment Integration: Support for popular payment gateways using Razor Pay."
+            ]
+        },
+        {
+            "id": "e3d4",
+            "name": "Weather App",
+            "techStack": [
+                " React.js",
+                "JavaScript",
+                " RESTful API"
+            ],
+            "description": [
+                "Search Functionality: Integrated a real-time search bar to fetch weather data for any location worldwide using an external weather API.",
+                "Favorites Management: Enabled users to save and manage favorite locations for quick access to weather updates.",
+                "Recent Searches: Implemented a history of recent searches, allowing users to revisit previously searched locations effortlessly",
+                "Responsive Design: Designed and developed a fully responsive interface, ensuring seamless user experience across devices "
+            ]
+        }
+    ],
+    "contact": []
 }

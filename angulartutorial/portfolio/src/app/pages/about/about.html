@@ -1,1 +1,21 @@
-<p>about works!</p>
+@if(pageData){
+<div class="text-center">
+  <h2 class="text-center">About</h2>
+  <img src="" alt="" />
+  <h4>{{ pageData.name }}</h4>
+  <h6 class="w-75 mx-auto">
+    {{ pageData.description }}
+  </h6>
+</div>
+<h3 class="my-5">Education</h3>
+<div class="d-flex gap-5 flex-wrap justify-content-center">
+  @for ( item of pageData.education; track $index) {
+  <mat-card appearance="outlined" class="cardItem text-center">
+    <mat-card-header class="justify-content-center">
+      <mat-card-title class="my-3"> {{ item.type }}</mat-card-title>
+      <mat-card-subtitle class="my-2">{{ item.institute }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="my-2"> Percentage: {{ item.percentage }}%</mat-card-content> </mat-card
+  >}
+</div>
+}

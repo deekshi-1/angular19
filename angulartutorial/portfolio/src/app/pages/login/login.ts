@@ -28,13 +28,12 @@ export class Login {
 
   onSubmit() {
     this.submitted = true
-    this.value = this.logService.checkLogin(this.loginForm.value)
-    if (this.value) {
-      console.log("sucess");
-      this.submitted = false;
-    } else {
-      console.log("failure");
-
-    }
+    this.logService.checkLogin(this.loginForm.value).subscribe(res => {
+      if (res.length) {
+        localStorage.setItem('role', 'admin')
+        this.value = true
+        this.submitted = false
+      } else this.value = false;
+    })
   }
 }

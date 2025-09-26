@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
+  api = environment.apiUrl
   admin = {
-    email: "abc@aa.in",
+    email: "  ",
     password: '1234'
   }
+  constructor(private http: HttpClient) { }
 
   checkLogin(data: any) {
-    if (data.email == this.admin.email && data.password == this.admin.password) {
-      return true
-    }
-    else return false;
+    return this.http.get<any[]>(this.api + 'auth?email=' + data.email + '&password=' + data.password)
   }
 }
