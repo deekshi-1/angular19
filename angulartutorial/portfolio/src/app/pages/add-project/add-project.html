@@ -1,0 +1,67 @@
+<h2 class="text-center">Ask me your Query</h2>
+<div class="formBox p-3">
+  <mat-card class="example-card overflow-hidden p-3 gap-4" appearance="outlined">
+    <form [formGroup]="projectForm" class="d-flex flex-column" (ngSubmit)="onSubmit()">
+      <mat-form-field class="inputBox w-50" appearance="outline">
+        <mat-label>Project Name</mat-label>
+        <input matInput type="text" formControlName="name" />
+        @if(projectForm.controls['name'].hasError('required') &&
+        projectForm.controls['name'].touched){<mat-error> Field Required </mat-error>}
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Tech Stack</mat-label>
+        <input
+          matInput
+          #techInput
+          placeholder="Add Tech..."
+          [matChipInputFor]="techChipGrid"
+          (matChipInputTokenEnd)="add($event, 'techStack')"
+        />
+      </mat-form-field>
+      @if(projectForm.get('techStack')?.hasError('minLengthArray')){<mat-error>
+        At least one tech stack item is required. </mat-error
+      >}
+      <mat-chip-grid #techChipGrid aria-label="Tech stack selection">
+        @for ( tech of techStack.controls; track $index; let i = $index) {
+        <mat-chip-row (removed)="remove(i, 'techStack')">
+          {{ tech.value }}
+          <button matChipRemove [attr.aria-label]="'remove ' + tech.value">
+            <mat-icon>cancel</mat-icon>
+          </button>
+        </mat-chip-row>
+        }
+      </mat-chip-grid>
+
+      <mat-form-field appearance="outline" class="my-3">
+        <mat-label>Description</mat-label>
+        <input
+          matInput
+          placeholder="Add Keyword..."
+          (keydown.enter)="add($event, 'description'); $event.preventDefault()"
+        />
+      </mat-form-field>
+      @if(projectForm.get('description')?.hasError('minLengthArray')){<mat-error>
+        At least one Description Item is required. </mat-error
+      >}
+
+      <div class="displayItems">
+        @for ( desc of description.controls; track $index; let i = $index) {
+        <div class="box d-flex">
+          <span>{{ desc.value }}</span>
+          <button type="button" class="remove-btn" (click)="remove(i, 'description')">X</button>
+        </div>
+        }
+      </div>
+
+      <button
+        mat-raised-button
+        color="primary"
+        class="mx-auto mt-3"
+        [disabled]="projectForm.invalid"
+      >
+        Submit
+      </button>
+    </form>
+  </mat-card>
+</div>

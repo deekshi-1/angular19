@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { DataServices } from '../../services/data/data-services';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-project',
-  imports: [MatCardModule, MatButtonModule, MatIcon],
+  imports: [MatCardModule, MatButtonModule, MatIcon, RouterLink],
   templateUrl: './project.html',
   styleUrl: './project.scss'
 })

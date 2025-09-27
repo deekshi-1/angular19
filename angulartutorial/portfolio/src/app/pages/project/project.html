@@ -1,7 +1,9 @@
-<h3 class="text-center my-5">Project</h3>
+<h2 class="text-center my-5">Project</h2>
 @if(role ==='admin'){
 <div class="d-flex justify-content-end my-4">
-  <button matButton="tonal"><mat-icon>add</mat-icon>Add Project</button>
+  <button matButton="tonal" [routerLink]="['/home/addProject']">
+    <mat-icon>add</mat-icon>Add Project
+  </button>
 </div>
 } @if (pageData) { @for ( item of pageData; track $index) {
 <div class="items px-4 mb-3">
@@ -22,7 +24,9 @@
       </ul></mat-card-content
     >
     @if(role ==='admin'){<mat-card-actions align="end">
-      <button matButton>Edit</button> </mat-card-actions
+      <button matButton [routerLink]="['/home/addProject']" [queryParams]="{ id: item.id }">
+        Edit
+      </button> </mat-card-actions
     >}
   </mat-card>
 </div>

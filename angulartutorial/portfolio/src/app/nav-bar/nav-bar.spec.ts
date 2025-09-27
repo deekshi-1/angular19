@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NavBar } from './nav-bar';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 describe('NavBar', () => {
   let component: NavBar;
@@ -8,9 +9,23 @@ describe('NavBar', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavBar]
-    })
-    .compileComponents();
+      imports: [NavBar],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            // mock anything your component needs from ActivatedRoute
+            params: of({}),
+            queryParams: of({}),
+            snapshot: {
+              paramMap: {
+                get: () => null
+              }
+            }
+          }
+        }
+      ]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NavBar);
     component = fixture.componentInstance;
@@ -21,3 +36,4 @@ describe('NavBar', () => {
     expect(component).toBeTruthy();
   });
 });
+  

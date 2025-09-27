@@ -1,3 +1,4 @@
+import { DataServices } from './../../services/data/data-services';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,14 +15,24 @@ import { MatInputModule } from '@angular/material/input';
 export class Contact {
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private dataService: DataServices) {
     this.contactForm = this.fb.group({
       firstName: ['', [Validators.required]], lastName: [''],
-      phone: ['', [Validators.required]],
+      phone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
       email: ['', [Validators.required, Validators.email, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
       querry: ['', [Validators.required]]
     });
   }
 
-  onSubmit() { }
+  onSubmit() {
+    this.dataService.sendQuery(this.contactForm.value).subscribe(item => {
+      this.contactForm.reset()
+      Object.keys(this.contactForm.controls).forEach(key => {
+        this.contactForm.get(key)?.setErrors(null);
+        this.contactForm.get(key)?.markAsPristine();
+        this.contactForm.get(key)?.markAsUntouched();
+      });
+      if(item)alert("Querry Submitted")
+    })
+  }
 }

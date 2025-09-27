@@ -1,4 +1,4 @@
-<h3 class="text-center">Ask me your Querry</h3>
+<h2 class="text-center">Ask me your Querry</h2>
 <div class="formBox p-3">
   <mat-card class="example-card overflow-hidden p-3 gap-4" appearance="outlined">
     <form [formGroup]="contactForm" class="d-flex flex-column" (ngSubmit)="onSubmit()">
@@ -27,20 +27,24 @@
           @if (contactForm.controls['email'].hasError('required') &&
           contactForm.controls['email'].touched) {
           <mat-error>Field Required</mat-error>
+          }@else if(contactForm.controls['email'].hasError('pattern')){
+          <mat-error>Must be email</mat-error>
           }
         </mat-form-field>
         <mat-form-field class="inputBox" appearance="outline">
           <mat-label>Phone</mat-label>
-          <input matInput type="" formControlName="lastName" />
-          @if (contactForm.controls['lastName'].hasError('required') &&
-          contactForm.controls['lastName'].touched) {
+          <input matInput type="text" formControlName="phone" maxlength="10"/>
+          @if (contactForm.controls['phone'].hasError('required') &&
+          contactForm.controls['phone'].touched) {
           <mat-error>Field Required</mat-error>
+          }@else if(contactForm.controls['phone'].hasError('pattern')){
+          <mat-error>Must be 10 numbers</mat-error>
           }
         </mat-form-field>
       </div>
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Textarea</mat-label>
-        <textarea matInput></textarea>
+        <textarea matInput formControlName="querry"></textarea>
       </mat-form-field>
       <button matButton="filled" class="mx-auto" [disabled]="contactForm.invalid">Submit</button>
     </form>

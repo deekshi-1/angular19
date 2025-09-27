@@ -1,62 +1,104 @@
 {
-    "auth": [
-        {
-            "email": "abc@aa.in",
-            "password": "1234"
-        }
-    ],
-    "about": {
-        "name": "Deekshith C",
-        "description": "Experienced developer with a strong foundation in building dynamic and scalable web applications. Proficient in frontend frameworks with expertise in translating complex UI/UXndesigns into responsive, highperformance interfaces. Recently completed comprehensive trainingvin Full Stack Development, enhancing backend skills.",
-        "education": [
-            {
-                "type": "High School-10th",
-                "institute": "Mambaram English Medium School",
-                "percentage": "95"
-            },
-            {
-                "type": "High Secondary 12th",
-                "institute": "Mambaram Higher Secondary School",
-                "percentage": "85.5"
-            },
-            {
-                "type": "Graduation B.Tech",
-                "institute": "Mambaram English Medium School",
-                "percentage": "75.6"
-            }
-        ]
+  "auth": [
+    {
+      "email": "abc@aa.in",
+      "password": "1234",
+      "id": "e7be"
+    }
+  ],
+  "about": {
+    "name": "Deekshith C",
+    "description": "Experienced developer with a strong foundation in building dynamic and scalable web applications. Proficient in frontend frameworks with expertise in translating complex UI/UXndesigns into responsive, highperformance interfaces. Recently completed comprehensive trainingvin Full Stack Development, enhancing backend skills.",
+    "education": [
+      {
+        "type": "High School-10th",
+        "institute": "Mambaram English Medium School",
+        "percentage": "95"
+      },
+      {
+        "type": "High Secondary 12th",
+        "institute": "Mambaram Higher Secondary School",
+        "percentage": "85.5"
+      },
+      {
+        "type": "Graduation B.Tech",
+        "institute": "Mambaram English Medium School",
+        "percentage": "75.6"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "E-Commerce Website",
+      "techStack": [
+        "React",
+        "Nodejs",
+        "MongoDb"
+      ],
+      "description": [
+        "User Registration & Authentication: Secure user sign-up and login system",
+        "Shopping Cart: Add products to the cart and proceed to checkout.",
+        "Order Management: Place orders, view order history, and track status.",
+        "Payment Integration: Support for popular payment gateways using Razor Pay."
+      ],
+      "id": "e185"
     },
-    "projects": [
-        {
-            "id": "e185",
-            "name": "E-Commerce Website",
-            "techStack": [
-                "React",
-                "Nodejs",
-                "MongoDb"
-            ],
-            "description": [
-                "User Registration & Authentication: Secure user sign-up and login system",
-                "Shopping Cart: Add products to the cart and proceed to checkout.",
-                "Order Management: Place orders, view order history, and track status.",
-                "Payment Integration: Support for popular payment gateways using Razor Pay."
-            ]
-        },
-        {
-            "id": "e3d4",
-            "name": "Weather App",
-            "techStack": [
-                " React.js",
-                "JavaScript",
-                " RESTful API"
-            ],
-            "description": [
-                "Search Functionality: Integrated a real-time search bar to fetch weather data for any location worldwide using an external weather API.",
-                "Favorites Management: Enabled users to save and manage favorite locations for quick access to weather updates.",
-                "Recent Searches: Implemented a history of recent searches, allowing users to revisit previously searched locations effortlessly",
-                "Responsive Design: Designed and developed a fully responsive interface, ensuring seamless user experience across devices "
-            ]
-        }
-    ],
-    "contact": []
+    {
+      "id": "e3d4",
+      "name": "Weather App",
+      "techStack": [
+        " React.js",
+        "JavaScript",
+        " RESTful API"
+      ],
+      "description": [
+        "Search Functionality: Integrated a real-time search bar to fetch weather data for any location worldwide using an external weather API.",
+        "Favorites Management: Enabled users to save and manage favorite locations for quick access to weather updates.",
+        "Recent Searches: Implemented a history of recent searches, allowing users to revisit previously searched locations effortlessly",
+        "Responsive Design: Designed and developed a fully responsive interface, ensuring seamless user experience across devices "
+      ]
+    }
+  ],
+  "contact": [
+    {
+      "id": "60ea",
+      "firstName": "asdasd",
+      "lastName": "asdas",
+      "phone": "hajsdhajsd",
+      "email": "ada@gmail.coom",
+      "querry": "aDASSACASCSDF"
+    },
+    {
+      "id": "5dba",
+      "firstName": "asdsad",
+      "lastName": "asdasd",
+      "phone": "asd",
+      "email": "asdasd@gmail.com",
+      "querry": "asdasdadasd"
+    },
+    {
+      "id": "bc36",
+      "firstName": "sadsadasd",
+      "lastName": "asdasd",
+      "phone": "1231231231",
+      "email": "asdas@ada.com",
+      "querry": "asdasdadacasfdsf"
+    },
+    {
+      "id": "80a2",
+      "firstName": "asdas",
+      "lastName": "sadas",
+      "phone": "3123132423",
+      "email": "adas@daca.com",
+      "querry": "sadfdsacxwffwfdsfwerfrqf"
+    },
+    {
+      "id": "d4f1",
+      "firstName": "ASDASD",
+      "lastName": "ASDASD",
+      "phone": "1231323123",
+      "email": "sadfdshaf@gmail.com",
+      "querry": "dsdadssadadsfsd"
+    }
+  ]
 }

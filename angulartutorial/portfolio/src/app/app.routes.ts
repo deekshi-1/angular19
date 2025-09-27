@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { authGaurdGuard } from './auth-gaurd-guard';
 
 export const routes: Routes = [
   {
@@ -7,7 +8,7 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'home',
+    path: 'bankingapp',
     loadComponent: () => import('./pages/home/home').then((m) => m.Home),
     children: [{
       path: '',
@@ -21,6 +22,14 @@ export const routes: Routes = [
     }, {
       path: 'contact',
       loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
+    }, {
+      path: 'addProject',
+      canActivate: [authGaurdGuard],
+      loadComponent: () => import('./pages/add-project/add-project').then((m) => m.AddProject),
+    }, {
+      path: 'admin',
+      canActivate: [authGaurdGuard],
+      loadComponent: () => import('./pages/query-page/query-page').then((m) => m.QueryPage),
     }]
   },
   { path: 'login', loadComponent: () => import('./pages/login/login').then((m) => m.Login) }

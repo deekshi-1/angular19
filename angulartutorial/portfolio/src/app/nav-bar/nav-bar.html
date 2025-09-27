@@ -1,5 +1,13 @@
-<div class="outerSection d-flex gap-4 p-4">
-  <div class="listUser" a (click)="goTo('')">About</div>
-  <div class="listUser" (click)="goTo('project')">Project</div>
-  <div class="listUser" (click)="goTo('contact')">Contact</div>
+<div class="d-flex justify-content-between outerSection p-4 gap-4">
+  <div class="d-flex gap-4">
+    <div class="listUser" a (click)="goTo('')">About</div>
+    <div class="listUser" (click)="goTo('project')">Project</div>
+    <div class="listUser" (click)="goTo('contact')">Contact</div>
+    @if(role() === 'admin'){
+    <div class="listUser" (click)="goTo('admin')">Admin</div>
+    }
+  </div>
+  @if(role() === 'admin'){
+  <div class="listUser" (click)="logout()">logout</div>
+  }
 </div>
