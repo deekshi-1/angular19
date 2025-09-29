@@ -1,1 +1,43 @@
-<p>debit works!</p>
+<div class="outerDiv">
+  <mat-card class="p-5 shadow-lg">
+    <mat-card-title class="justify-content-center mb-4 text-center">Credit Amount</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="inputform" (ngSubmit)="submit($event)">
+        <div class="mb-3">
+          <mat-form-field appearance="outline" class="w-50">
+            <mat-label>Acc no:</mat-label>
+            <input type="text" matInput formControlName="accNo" />
+            @if (inputform.controls['accNo'].hasError('required') &&
+            inputform.controls['accNo'].touched) {
+            <mat-error>Field Required</mat-error>
+            } @else if
+            ((inputform.controls['accNo'].hasError('minlength')||inputform.controls['accNo'].hasError('maxlength'))
+            && inputform.controls['accNo'].touched) {
+            <mat-error>Must be 10 digits</mat-error>
+            }
+          </mat-form-field>
+        </div>
+
+        <div class="mb-3">
+          <mat-form-field appearance="outline">
+            <mat-label>Amount</mat-label>
+            <input type="number" matInput formControlName="amount" min="0" />@if
+            (inputform.controls['amount'].hasError('required') &&
+            inputform.controls['amount'].touched) {
+            <mat-error>Field Required</mat-error>
+            } @else if (inputform.controls['amount'].hasError('minlength') &&
+            inputform.controls['amount'].touched) {
+            <mat-error>Must be at lest 6 characters</mat-error>
+            }
+          </mat-form-field>
+          @if (false) {
+          <mat-error>Invalid credentials</mat-error>
+          }
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" matButton="outlined">Transfer</button>
+        </div>
+      </form>
+    </mat-card-content></mat-card
+  >
+</div>

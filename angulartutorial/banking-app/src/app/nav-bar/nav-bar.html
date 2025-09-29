@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-between outerSection p-4 gap-4">
+  <div class="d-flex gap-4">
+    <div class="listUser" [routerLink]="'/banking'">About</div>
+    <div class="listUser" [routerLink]="'/banking/credit'">Credit</div>
+    <div class="listUser" [routerLink]="'/banking/debit'">Debit</div>
+    <div class="listUser" [routerLink]="'/banking/transaction'">Transactions</div>
+  </div>
+  <div class="listUser" (click)="logout()">logout</div>
+</div>

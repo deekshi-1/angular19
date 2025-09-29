@@ -3,11 +3,6 @@
     <div class="listUser" a (click)="goTo('')">About</div>
     <div class="listUser" (click)="goTo('project')">Project</div>
     <div class="listUser" (click)="goTo('contact')">Contact</div>
-    @if(role() === 'admin'){
-    <div class="listUser" (click)="goTo('admin')">Admin</div>
-    }
   </div>
-  @if(role() === 'admin'){
   <div class="listUser" (click)="logout()">logout</div>
-  }
 </div>

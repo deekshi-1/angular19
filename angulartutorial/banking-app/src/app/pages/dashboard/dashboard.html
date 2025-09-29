@@ -1,1 +1,22 @@
-<p>dashboard works!</p>
+@if(userData){
+  <div class="p-5">
+  <mat-card appearance="outlined">
+    <mat-card-header class="justify-content-center">
+      <mat-card-title class="text-center"><span class="h2"> User Details</span> </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="my-5 text-center">
+      <div class="item">
+        <b>Acc No :{{ userData!.accNo }} </b>
+      </div>
+      <div class="item">
+        <b>Name :</b> {{ userData.firstName | titlecase }} {{ userData.lastName | titlecase }}
+      </div>
+      <div class="item"><b>Email :</b>{{ userData.email }}</div>
+      <div class="item"><b>Phone :</b> {{ userData.phone }}</div>
+      <div class="item my-4 h3">
+        <b>Balance :{{ userData.balance | currency : 'INR' }}</b>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+}

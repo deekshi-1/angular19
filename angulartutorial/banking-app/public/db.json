@@ -1,0 +1,74 @@
+{
+  "user": [
+    {
+      "id": "31d7",
+      "firstName": "arun",
+      "lastName": "raj",
+      "email": "arun@gmail.com",
+      "phone": "9879879871",
+      "password": "123456",
+      "accNo": 5039491392,
+      "balance": 6704
+    },
+    {
+      "id": "912e",
+      "firstName": "arjun",
+      "lastName": "das",
+      "email": "arjun@gmail.com",
+      "phone": "9988776655",
+      "password": "123456",
+      "accNo": 6203260519,
+      "balance": 606
+    }
+  ],
+  "transactions": [
+    {
+      "id": "b7b6",
+      "sender": 5039491392,
+      "receiver": 5039491392,
+      "receiverName": "arun",
+      "amount": 20,
+      "date": "2025-09-29T11:14:17.410Z"
+    },
+    {
+      "id": "4edb",
+      "sender": 5039491392,
+      "receiver": 6203260519,
+      "receiverName": "arjun",
+      "amount": 55,
+      "date": "2025-09-29T11:15:11.177Z"
+    },
+    {
+      "id": "4790",
+      "sender": 5039491392,
+      "receiver": 6203260519,
+      "receiverName": "arjun",
+      "amount": 6,
+      "date": "2025-09-29T11:15:33.391Z"
+    },
+    {
+      "id": "8ebe",
+      "sender": 5039491392,
+      "receiver": 5039491392,
+      "receiverName": "arun",
+      "amount": 30,
+      "date": "2025-09-29T11:15:39.383Z"
+    },
+    {
+      "id": "e511",
+      "sender": 6203260519,
+      "receiver": 6203260519,
+      "receiverName": "arjun",
+      "amount": 6,
+      "date": "2025-09-29T11:17:57.760Z"
+    },
+    {
+      "id": "966d",
+      "sender": 6203260519,
+      "receiver": 5039491392,
+      "receiverName": "arun",
+      "amount": 6,
+      "date": "2025-09-29T11:18:10.976Z"
+    }
+  ]
+}
