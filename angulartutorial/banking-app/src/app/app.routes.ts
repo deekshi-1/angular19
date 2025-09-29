@@ -1,11 +1,5 @@
 import { Routes } from '@angular/router';
-import { Login } from './pages/login/login';
-import { Signup } from './pages/signup/signup';
 import { Home } from './pages/home/home';
-import { Dashboard } from './pages/dashboard/dashboard';
-import { Credit } from './pages/credit/credit';
-import { Debit } from './pages/debit/debit';
-import { Transactions } from './pages/transactions/transactions';
 import { authGaurd } from './gaurd/auth-gaurd-guard';
 
 export const routes: Routes = [{
@@ -13,15 +7,15 @@ export const routes: Routes = [{
   redirectTo: 'banking',
   pathMatch: 'full',
 },
-{ path: 'login', component: Login },
-{ path: 'signup', component: Signup }, {
+{ path: 'login', loadComponent: () => import('./pages/login/login').then((m) => m.Login) },
+{ path: 'signup', loadComponent: () => import('./pages/signup/signup').then((m) => m.Signup) }, {
   path: 'banking',
   component: Home,
   canActivate: [authGaurd],
   children: [
-    { path: "", component: Dashboard },
-    { path: "credit", component: Credit },
-    { path: "debit", component: Debit },
-    { path: "transaction", component: Transactions }
+    { path: "", loadComponent: () => import('./pages/dashboard/dashboard').then((m) => m.Dashboard) },
+    { path: "credit", loadComponent: () => import('./pages/credit/credit').then((m) => m.Credit) },
+    { path: "debit", loadComponent: () => import('./pages/debit/debit').then((m) => m.Debit) },
+    { path: "transaction", loadComponent: () => import('./pages/transactions/transactions').then((m) => m.Transactions) }
   ]
 }];
