@@ -10,16 +10,16 @@ let students = [
   { name: "varun", age: 21, mark: 45 },
 ];
 
-app.get("/", (req, res) => {
-  res.send("hello from simple server :)");
-});
-
 app.get("/sum", (req, res) => {
   console.log(req.query);
   let sum = parseInt(req.query.a) + parseInt(req.query.b);
   console.log(sum);
-
   res.send(`Sum is ${sum}`);
+});
+
+app.get("/reverse", (req, res) => {
+  let str = req.query.string.trim().split("").reverse().join("");
+  res.send(str);
 });
 
 app.get("/sumofnumbers", (req, res) => {
