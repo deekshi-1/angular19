@@ -22,6 +22,25 @@ app.get("/reverse", (req, res) => {
   res.send(str);
 });
 
+app.get("/plaindrome", (req, res) => {
+  let str = req.query.string.trim();
+  let strRev = str.split("").reverse().join("");
+  if (str === strRev) res.send("Palindrom");
+  else res.send("Not A Palindrom");
+});
+
+app.get("/prime", (req, res) => {
+  let num = parseInt(req.query.number.trim());
+  if (num == 1 || num == 0) return res.send("nor prime or composite");
+  flag = false;
+  for (let i = 2; i < num / 2; i++) {
+    if (num % i == 0) flag = true;
+  }
+  if (flag) {
+    return res.send("not prime");
+  } else return res.send("prime");
+});
+
 app.get("/sumofnumbers", (req, res) => {
   let num = parseInt(req.query.num);
   let sum = 0;
